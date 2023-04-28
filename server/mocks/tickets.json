@@ -1,0 +1,191 @@
+[
+  {
+    "sign": "d5e5ecf6-31f7-42af-9d29-f75f8c3e3e4c",
+    "price": 12500,
+    "carrier": "S7",
+    "segments": [
+      {
+        "origin": "MOW",
+        "destination": "HKT",
+        "date": "2021-03-10T06:10:00.000Z",
+        "stops": ["HKG"],
+        "duration": 1325
+      },
+      {
+        "origin": "HKT",
+        "destination": "MOW",
+        "date": "2021-03-24T23:25:00.000Z",
+        "stops": ["SHA", "BKK", "HKG"],
+        "duration": 1340
+      }
+    ]
+  },
+  {
+    "sign": "ec1f6d06-6af4-40e9-9d8a-0b5e43f5a5b5",
+    "price": 13750,
+    "carrier": "SU",
+    "segments": [
+      {
+        "origin": "MOW",
+        "destination": "HKT",
+        "date": "2023-05-01T07:35:00.000Z",
+        "stops": ["DXB"],
+        "duration": 1200
+      },
+      {
+        "origin": "HKT",
+        "destination": "MOW",
+        "date": "2023-05-15T19:10:00.000Z",
+        "stops": ["AUH", "IST", "DXB"],
+        "duration": 1400
+      }
+    ]
+  },
+  {
+    "sign": "8b39bf2c-5c47-47e1-a04f-2a2402c117e2",
+    "price": 14500,
+    "carrier": "EK",
+    "segments": [
+      {
+        "origin": "MOW",
+        "destination": "HKT",
+        "date": "2023-07-02T12:40:00.000Z",
+        "stops": ["DXB", "BKK"],
+        "duration": 1350
+      },
+      {
+        "origin": "HKT",
+        "destination": "MOW",
+        "date": "2023-07-16T04:50:00.000Z",
+        "stops": ["IST", "DXB"],
+        "duration": 1360
+      }
+    ]
+  },
+  {
+    "sign": "12d0890a-19e1-47ca-9d9e-c8fca559247f",
+    "price": 12000,
+    "carrier": "TG",
+    "segments": [
+      {
+        "origin": "MOW",
+        "destination": "HKT",
+        "date": "2023-08-20T08:20:00.000Z",
+        "stops": ["BKK"],
+        "duration": 1280
+      },
+      {
+        "origin": "HKT",
+        "destination": "MOW",
+        "date": "2023-09-03T23:45:00.000Z",
+        "stops": ["BKK", "PEK"],
+        "duration": 1490
+      }
+    ]
+  },
+  {
+    "sign": "cf80cc2d-cbbd-4e1c-a491-0b68d18d1dd9",
+    "price": 12900,
+    "carrier": "SQ",
+    "segments": [
+      {
+        "origin": "MOW",
+        "destination": "HKT",
+        "date": "2023-10-05T06:30:00.000Z",
+        "stops": ["SIN"],
+        "duration": 1260
+      },
+      {
+        "origin": "HKT",
+        "destination": "MOW",
+        "date": "2023-10-19T19:55:00.000Z",
+        "stops": ["BKK", "SIN"],
+        "duration": 1370
+      }
+    ]
+  },
+  {
+    "sign": "77a7b758-cc09-4218-9073-84e038efafbc",
+    "price": 13000,
+    "carrier": "LH",
+    "segments": [
+      {
+        "origin": "MOW",
+        "destination": "HKT",
+        "date": "2023-11-03T11:45:00.000Z",
+        "stops": ["FRA"],
+        "duration": 1300
+      },
+      {
+        "origin": "HKT",
+        "destination": "MOW",
+        "date": "2023-11-17T17:25:00.000Z",
+        "stops": ["FRA", "CDG"],
+        "duration": 1440
+      }
+    ]
+  },
+  {
+    "sign": "a01f68a2-449c-465e-8d12-24b70ecf37ee",
+    "price": 11500,
+    "carrier": "AF",
+    "segments": [
+      {
+        "origin": "MOW",
+        "destination": "HKT",
+        "date": "2023-12-07T08:10:00.000Z",
+        "stops": ["CDG"],
+        "duration": 1235
+      },
+      {
+        "origin": "HKT",
+        "destination": "MOW",
+        "date": "2023-12-21T22:30:00.000Z",
+        "stops": ["CDG", "AMS"],
+        "duration": 1390
+      }
+    ]
+  },
+  {
+    "sign": "d9a21e8a-5dd5-4aeb-9446-48f8b39f2a2a",
+    "price": 15000,
+    "carrier": "QR",
+    "segments": [
+      {
+        "origin": "MOW",
+        "destination": "HKT",
+        "date": "2023-02-15T15:55:00.000Z",
+        "stops": ["DOH"],
+        "duration": 1250
+      },
+      {
+        "origin": "HKT",
+        "destination": "MOW",
+        "date": "2023-03-01T01:20:00.000Z",
+        "stops": ["DOH", "IST"],
+        "duration": 1330
+      }
+    ]
+  },
+  {
+    "sign": "9c4e8cf3-b3a4-4f07-b6a8-b6a17aebf40c",
+    "price": 12700,
+    "carrier": "KL",
+    "segments": [
+      {
+        "origin": "MOW",
+        "destination": "HKT",
+        "date": "2023-04-22T10:05:00.000Z",
+        "stops": ["AMS"],
+        "duration": 1295
+      },
+      {
+        "origin": "HKT",
+        "destination": "MOW",
+        "date": "2023-05-06T20:40:00.000Z",
+        "stops": ["AMS", "LHR"],
+        "duration": 1460
+      }
+    ]
+  }
+]
