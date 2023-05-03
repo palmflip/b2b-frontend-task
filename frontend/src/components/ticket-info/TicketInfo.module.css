@@ -1,0 +1,42 @@
+.ticketInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 20px;
+
+    padding-top: 10px;
+}
+
+.text {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+    color: #A0B0B9;
+}
+
+.secondText {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #4A4A4A;
+}
+
+@media only screen and (max-width: 400px) {
+    .ticketInfo {
+        gap: 10px;
+    }
+
+	.text {
+        font-size: 10px;
+        line-height: 16px;
+        letter-spacing: 0;
+ 	}
+
+     .secondText {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
