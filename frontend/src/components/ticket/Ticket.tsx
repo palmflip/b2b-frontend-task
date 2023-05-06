@@ -2,27 +2,18 @@ import React from 'react';
 
 import { TicketHead } from '../ticket-head'
 import { TicketInfo } from '../ticket-info';
+import type { ITicket } from '../../stores/tickets-store'
 
 import styles from './Ticket.module.css'
 
-export const Ticket: React.FC = () => {
+export type TicketProps = Omit<ITicket, 'sign'>
+
+export const Ticket: React.FC<TicketProps> = ({ price, carrier, segments }) => {
     return (
         <div className={styles.ticket}>
-            <TicketHead price={13400} carrier={'S7'}/>
-            <TicketInfo 
-                origin={'MOW'}
-                destination={'HKT'}
-                dateUTC='2023-04-22T10:05:00.000Z'
-                duration={1237}
-                stops={['HKG', 'JNB']}
-            />
-            <TicketInfo 
-                origin={'MOW'}
-                destination={'HKT'}
-                dateUTC='2023-04-22T10:05:00.000Z'
-                duration={1295}
-                stops={[]}
-            />
+            <TicketHead price={price} carrier={carrier}/>
+            {/* Note в данном кейсе можно index в качестыве ключа) */}
+            { segments.map((segment, i) => ( <TicketInfo  key={i} {...segment} /> )) }
         </div>
     );
 }

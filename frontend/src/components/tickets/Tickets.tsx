@@ -1,21 +1,29 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { observer } from 'mobx-react-lite';
 
 import { Ticket } from '../ticket'
 import { Button } from '../../ui/button'
 
+import { ticketsStore } from '../../stores/tickets-store'
+
 import styles from './Tickets.module.css'
 
-export const Tickets: React.FC = () => {
+export const Tickets: React.FC = observer(() => {
+    const showButton = !ticketsStore.stop
+    const handleButtonClick = useCallback(() => ticketsStore.fetchTickets(), [])
+
     return (
         <div className={styles.tickets}>
-            <Ticket/>
-            <Ticket/>
-            <Ticket/>
-            <Ticket/>
-            <Ticket/>
-            <Button>
-               ПОКАЗАТЬ ЕЩЕ 5 БИЛЕТОВ
-            </Button>
+            { 
+                ticketsStore.sortedTickets.map(({ sign, ...props }) => (
+                    <Ticket 
+                        key={sign}
+                        {...props}
+                    />
+                )) 
+            }
+            {/* еще 5 билетов звучит не правдоподобно) */}
+            { showButton && <Button whenClick={handleButtonClick}> ПОКАЗАТЬ ЕЩЕ БИЛЕТЫ </Button> }  
         </div>
     );
-}
+})

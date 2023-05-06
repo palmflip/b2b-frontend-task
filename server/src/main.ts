@@ -14,11 +14,14 @@ app.use(function (req, res, next) {
 
 const PORT = process.env.PORT || 3000;
 
-const currentChunkIndex: { [SID: string]: number } = {};
+const currentChunkIndex: { [SID: string]: { currStart: number, prevEndIndex: number } } = {};
 
 app.get("/search", (req: Request, res: Response) => {
   const searchId = Math.random().toString(36).substring(2, 8);
-  currentChunkIndex[searchId] = 0;
+  currentChunkIndex[searchId] = {
+    prevEndIndex: -Infinity,
+    currStart: 0,
+  }
   res.send({ searchId });
 });
 
@@ -34,11 +37,17 @@ app.get("/tickets", (req: Request, res: Response) => {
     return;
   }
 
+  // Note: мне кажется хранить обрабатыватxь дубликаты в коллекции на клиенте такое себе, поэтому фиксшу тут)
+  // Проблема в том, что в следующей итерации новый startIndex может оказаться меньше прошлого endIndex, из-за чего летят дубликаты
+  // Плюс ко всему если фильтровать это на клиенте, то может так получиться, что все новые данные оказались дубликатами и необходима делать повторный запрос
+  // Но вместе с тем, у нас так же увеличился на currentChunkIndex[searchId]++ и следующий запрос может отдать так же пустой ответ с stop: true
   const chunkSize = Math.floor(Math.random() * 5) + 1;
-  const startIndex = currentChunkIndex[searchId] * chunkSize;
+  let startIndex = currentChunkIndex[searchId].currStart * chunkSize;
+  if (startIndex < currentChunkIndex[searchId].prevEndIndex) startIndex = currentChunkIndex[searchId].prevEndIndex;
   const endIndex = startIndex + chunkSize;
   const chunk = tickets.slice(startIndex, endIndex);
-  currentChunkIndex[searchId]++;
+  currentChunkIndex[searchId].currStart++;
+  currentChunkIndex[searchId].prevEndIndex = endIndex
 
   if (endIndex >= tickets.length) {
     res.send({ tickets: chunk, stop: true });

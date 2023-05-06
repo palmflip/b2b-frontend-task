@@ -26,7 +26,7 @@ export function formatDistanceStrict(duration: number) {
 export function timeToString(date: Date) {
     const h = date.getHours();
     const m = date.getMinutes();
-    const rounding = 5 - m % 5;;
+    const rounding = 5 - m % 5;
 
     return `${h}:${m + rounding}`;
 }
