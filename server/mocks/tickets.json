@@ -21,6 +21,27 @@
     ]
   },
   {
+    "sign": "bk4e8cf3-b3l2-4f07-b6a8-b6a17aebf45c",
+    "price": 12700,
+    "carrier": "KL",
+    "segments": [
+      {
+        "origin": "MOW",
+        "destination": "HKT",
+        "date": "2023-04-22T10:05:00.000Z",
+        "stops": ["AMS"],
+        "duration": 1295
+      },
+      {
+        "origin": "HKT",
+        "destination": "MOW",
+        "date": "2023-05-06T20:40:00.000Z",
+        "stops": [],
+        "duration": 1460
+      }
+    ]
+  },
+  {
     "sign": "ec1f6d06-6af4-40e9-9d8a-0b5e43f5a5b5",
     "price": 13750,
     "carrier": "SU",
@@ -30,7 +51,7 @@
         "destination": "HKT",
         "date": "2023-05-01T07:35:00.000Z",
         "stops": ["DXB"],
-        "duration": 1200
+        "duration": 1953
       },
       {
         "origin": "HKT",
