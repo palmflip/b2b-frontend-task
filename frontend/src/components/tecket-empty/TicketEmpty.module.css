@@ -1,0 +1,18 @@
+.ticketEmpty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 20px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 12px;
+    color: #2196F3;
+
+    background-color:#FFFFFF;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+

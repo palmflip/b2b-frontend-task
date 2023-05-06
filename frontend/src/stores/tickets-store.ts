@@ -33,7 +33,7 @@ export const transferOptions = ['all', 0, 1, 2, 3] as const
 // Note: я не буду создавать отдельную сущность для Api, и описывать общий контракт приходящих данных
 class TicketsStore {
     private searchId: string | null = null;
-    private tickets: ITicket[] = [];
+    tickets: ITicket[] = [];
 
     // Note: кажется вся сортировка и фильтры должны лежать в другом месте, и далее внедрять тикеты как зависимость
     sortOption: SortOption = 'bestPrice'
