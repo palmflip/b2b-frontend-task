@@ -21,7 +21,7 @@ const wordMap: Record<typeof transferOptions[number], string> = {
 }
 
 export const TicketsFilter: React.FC<TicketsFilterProps> = observer(({ className }: TicketsFilterProps) => {
-    const handleWhenClick = useCallback((option: typeof transferOptions[number]) => () => ticketsStore.toggleTransferOption(option), [ ])
+    const handleOnClick = useCallback((option: typeof transferOptions[number]) => () => ticketsStore.toggleTransferOption(option), [ ])
 
     return (
         <div className={classnames([styles.ticketsFilter, className])} aria-label="Фильтрация по колличеству пересадок">
@@ -31,7 +31,7 @@ export const TicketsFilter: React.FC<TicketsFilterProps> = observer(({ className
                     <Checkbox 
                         key={option}
                         checked={ticketsStore.transferOption.has(option)} 
-                        whenChange={handleWhenClick(option)}
+                        onChange={handleOnClick(option)}
                     > 
                         {wordMap[option]}
                     </Checkbox>

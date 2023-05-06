@@ -10,13 +10,13 @@ export interface CheckboxProps {
     value?: string;
 	id?: string;
 	name?: string;
-    whenChange: (value: boolean) => void;
+    onChange: (value: boolean) => void;
     children?: ReactNode;
 }
 
-export const Checkbox: React.FC<CheckboxProps> = ({ whenChange, className, children, ...props }) => {
+export const Checkbox: React.FC<CheckboxProps> = ({ onChange, className, children, ...props }) => {
     const handleWhenChange = (evt: ChangeEvent<HTMLInputElement>) => {
-        whenChange(evt.target.checked);
+        onChange(evt.target.checked);
     }
 
     return (

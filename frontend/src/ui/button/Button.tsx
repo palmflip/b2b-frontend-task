@@ -8,19 +8,14 @@ export interface ButtonProps {
     id?: string;
     disabled?: boolean;
     type?:  'button' | 'submit' | 'reset';
-    whenClick?: (evt: MouseEvent<HTMLButtonElement>) => void,
+    onClick: (evt: MouseEvent<HTMLButtonElement>) => void,
     children?: ReactNode;
 }
 
-export const Button: React.FC<ButtonProps> = ({ className, children, whenClick, ...props}) => {
-    const handleWhenClick = (evt: MouseEvent<HTMLButtonElement>) => {
-        whenClick?.(evt);
-    }
-
+export const Button: React.FC<ButtonProps> = ({ className, children, ...props}) => {
     return (
         <button 
             className={classnames([styles.button, className])}
-            onClick={handleWhenClick}
             {...props}
         >
             {children}

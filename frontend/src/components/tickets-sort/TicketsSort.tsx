@@ -8,25 +8,25 @@ import styles from './TicketsSort.module.css'
 
 export const TicketsSort: React.FC = observer(() => {
 
-    const handleWhenClick = useCallback((option: SortOption) => () => ticketsStore.setSortOption(option), [ ])
+    const handleOnClick = useCallback((option: SortOption) => () => ticketsStore.setSortOption(option), [ ])
 
     return (
         <div className={styles.ticketsSort}>
             <Tab 
                 active={ticketsStore.sortOption === 'bestPrice'} 
-                whenClick={handleWhenClick('bestPrice')}
+                onClick={handleOnClick('bestPrice')}
             >
                 САМЫЙ ДЕШЕВЫЙ
             </Tab>
             <Tab 
                 active={ticketsStore.sortOption === 'fastest'}
-                whenClick={handleWhenClick('fastest')}
+                onClick={handleOnClick('fastest')}
             >
                 САМЫЙ БЫСТРЫЙ
             </Tab>
             <Tab 
                 active={ticketsStore.sortOption === 'optimal'}
-                whenClick={handleWhenClick('optimal')}
+                onClick={handleOnClick('optimal')}
             >
                 ОПТИМАЛЬНЫЙ
             </Tab>

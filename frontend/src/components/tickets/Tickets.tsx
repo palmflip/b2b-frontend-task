@@ -25,7 +25,7 @@ export const Tickets: React.FC = observer(() => {
             }
             { showStub &&  <TicketEmpty />}
             {/* еще 5 билетов звучит не правдоподобно) */}
-            { showButton && <Button whenClick={handleButtonClick}> ПОКАЗАТЬ ЕЩЕ БИЛЕТЫ </Button> }  
+            { showButton && <Button onClick={handleButtonClick}> ПОКАЗАТЬ ЕЩЕ БИЛЕТЫ </Button> }  
         </div>
     );
 })
