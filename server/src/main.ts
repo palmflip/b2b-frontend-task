@@ -3,6 +3,8 @@ import tickets from "../mocks/tickets.json";
 
 const app = express();
 
+app.use(express.static('../frontend/dist'))
+
 app.use(function (req, res, next) {
   if (Math.random() * 100 < 10) {
     res.status(500).send();

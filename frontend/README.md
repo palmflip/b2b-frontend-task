@@ -1,8 +1,9 @@
 # Запуск
 
+### DEV
 - Для начала необходимо запустить сервер
     ```
-    cd server && yarn && yarn start
+    cd server && yarn && yarn dev
     ```
 - Далее сам фронтенд
     ```
@@ -10,6 +11,12 @@
     ```
 
 - Разработка велась на версии `nodejs v16.14.0`
+
+### PROD*
+
+-   ```
+    cd frontend && yarn && yarn build && cd ../server && yarn && yarn start
+    ```
 
 ### Комментарии по заданию 
 
