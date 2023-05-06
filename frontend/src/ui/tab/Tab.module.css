@@ -52,7 +52,6 @@
     border-right: 1px solid #2196F3;
 }
 
-/* Fixme: focus-within выглядит не красиво */
 .tab:focus-visible {
     z-index: 1;
     outline-offset: 5px;

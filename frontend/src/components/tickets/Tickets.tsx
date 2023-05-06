@@ -4,7 +4,6 @@ import { observer } from 'mobx-react-lite';
 import { Ticket } from '../ticket'
 import { Button } from '../../ui/button'
 import { TicketEmpty } from '../tecket-empty';
-
 import { ticketsStore } from '../../stores/tickets-store'
 
 import styles from './Tickets.module.css'

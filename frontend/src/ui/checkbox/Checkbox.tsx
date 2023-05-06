@@ -14,7 +14,6 @@ export interface CheckboxProps {
     children?: ReactNode;
 }
 
-// Note: вообще по хорошему сюда стоит еще добавить forwardRef/другие евенты, но сейчас в этом нет смысла
 export const Checkbox: React.FC<CheckboxProps> = ({ whenChange, className, children, ...props }) => {
     const handleWhenChange = (evt: ChangeEvent<HTMLInputElement>) => {
         whenChange(evt.target.checked);

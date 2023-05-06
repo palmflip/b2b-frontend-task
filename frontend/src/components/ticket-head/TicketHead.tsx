@@ -16,6 +16,8 @@ export const TicketHead: React.FC<TicketHeadProps> = ({ price, carrier }) => {
                     //pics.avs.io/110/36/${carrier}.png,
                     //pics.avs.io/220/72/${carrier}.png 2x`
                 }
+                width={110}
+                height={36}
                 src={`//pics.avs.io/110/36/${carrier}.png`} 
                 alt={`логотип перевозчика ${carrier}`}
             />
